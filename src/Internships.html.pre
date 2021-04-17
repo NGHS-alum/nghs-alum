@@ -1,0 +1,13 @@
+<table id="menu" class=sortable>
+    <thead>
+        <tr>
+            <th>Company</th>
+            <th>Job</th>
+            <th>Field</th>
+            <th>Link</th>
+            <th>Location</th>
+            <th>Pay</th>
+            <th>Experience</th>
+            <th>Notes</th>
+        </tr>
+    </thead>

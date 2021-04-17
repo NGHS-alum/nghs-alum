@@ -1,0 +1,11 @@
+<table id="menu" class=sortable>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Contact Info</th>
+            <th>NGHS graduation year</th>
+            <th>Major</th>
+            <th>Interests</th>
+            <th>College</th>
+        </tr>
+    </thead>
