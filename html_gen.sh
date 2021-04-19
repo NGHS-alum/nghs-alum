@@ -1,14 +1,15 @@
 #!/bin/sh -e
 
+baseFile="$1"
 outputdir="$2"
-baseFile=$1
 [ -f "$baseFile" ]
+srcFilePrefix="$(echo "$baseFile" | sed s/gen/src/)"
 target="$outputdir/$(basename "$baseFile")"
-rm -f "$target"
-cat "$(dirname "$baseFile")/header.html" >> "$target"
-[ -e "$baseFile.pre" ] && cat "$baseFile.pre" >> "$target"
+
+cat "src/header.html" > "$target"
+[ -e "$srcFilePrefix.pre" ] && cat "$srcFilePrefix.pre" >> "$target"
 cat "$baseFile" >> "$target"
-[ -e "$baseFile.post" ] && cat "$baseFile.post" >> "$target"
-cat "$(dirname "$baseFile")/footer.html" >> "$target"
+[ -e "$srcFilePrefix.post" ] && cat "$srcFilePrefix.post" >> "$target"
+cat "src/footer.html" >> "$target"
 
 sed -i "s/\${title}/\u$(basename "$baseFile" .html)/g; s/\${sitetitle}/NGHS/g" "$target"
