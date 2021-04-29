@@ -2,7 +2,10 @@
 You can help by adding to the database of job/internships or by adding your contact info.
 
 # Contact Alumni
-See alum.csv for a list of alum info. The format is Name, contact info, NGHS graduation year, Major, Interests, College
+See alum.csv for a list of alum info. The format is Name, contact info, NGHS graduation year, Major, Interests, College.
+Some notes:
+* For the sake of sanity, keep the list sorted by first name.
+* To avoid spam, you may want to write your contact info in a way hard for bots to parse like `user [at] domain [dot] com`
 
 # Job Directories
 * HS_Internships - for any internships for incoming HS students (not graduation seniors).

@@ -26,7 +26,6 @@ gen:
 gen/markdown:
 	mkdir -p $@
 
-
 clean:
 	rm -rfd gen/*
 

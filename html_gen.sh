@@ -12,4 +12,5 @@ cat "$baseFile" >> "$target"
 [ -e "$srcFilePrefix.post" ] && cat "$srcFilePrefix.post" >> "$target"
 cat "src/footer.html" >> "$target"
 
-sed -i "s/\${title}/\u$(basename "$baseFile" .html)/g; s/\${sitetitle}/NGHS/g" "$target"
+sed -i "s/\${title}/\u$(basename "$baseFile" .html)/g; s/\${sitetitle}/NGHS/g; s/<a href=\"\(\w*\).md\">/<a href='\1.html'>/g" "$target"
+
