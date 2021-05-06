@@ -1,6 +1,8 @@
 
 GEN := gen/alum.html gen/Internships.html gen/HS_Internships.html gen/Jobs.html
 MARKDOWN := $(patsubst %.md,gen/markdown/%.html,$(wildcard *.md)) gen/markdown/index.html
+MARKDOWN_CMD ?= markdown # Another valid option is 'smu -n'
+
 all: html
 
 html: $(GEN) $(MARKDOWN)
@@ -18,7 +20,7 @@ gen/markdown/index.html: gen/markdown/README.html
 	cp $^ $@
 
 gen/markdown/%.html: %.md | gen/markdown
-	smu -n <$^ | sed "s/\.(md|csv)/.html/g" > $@
+	$(MARKDOWN_CMD) 	<$^ | sed "s/\.(md|csv)/.html/g" > $@
 
 gen:
 	mkdir -p $@

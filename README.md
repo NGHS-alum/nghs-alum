@@ -28,7 +28,7 @@ There are many ways to help. See [CONTRIBUTING.md](CONTRIBUTING.md)
 See [FAQ.md](FAQ.md)
 
 # Building website
-The project is free and open source. We currently host it on [Github Page](https://nghs-alum.github.io/) for convince, but you can build and run your own copy. Instructions are for Unix like systems and the only dependency is [smu](https://github.com/Gottox/smu) for the markdown to html conversion.
+The project is free and open source. We currently host it on [Github Page](https://nghs-alum.github.io/) for convince, but you can build and run your own copy. Instructions are for Unix like systems and the only dependency is a markdown to html converted. By default we use [discount](https://github.com/Orc/discount), alternatives like [smu](https://github.com/Gottox/smu) can be used by setting `MARKDOWN_CMD` when calling make
 ```
 make
 ```

@@ -20,14 +20,13 @@ Inside each director should another directory with the company name. Inside thei
 * Notes          - MISC info
 Assume living expensive will be covered out of state internships and a relocation bonus for regular jobs unless otherwise stated.
 
-Full example
-HS_Internships/CompanyA/JobA:
+## Full example
 
-```
-# Comments are ignored
-Field: CS
-# Leading white space before the value is fine.
-Pay:   $10,000/mo
-Location: Garland, TX
-Link:  https://companya.com
-```
+Consider the file: `HS_Internships/CompanyA/JobA`
+
+    # Comments are ignored
+    Field: CS
+    # Leading white space before the value is fine.
+    Pay:   $10,000/mo
+    Location: Garland, TX
+    Link:  https://companya.com
