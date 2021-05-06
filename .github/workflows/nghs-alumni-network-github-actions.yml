@@ -1,0 +1,12 @@
+name: nghs-alumni-network
+on: [push]
+jobs:
+    build-content:
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Checkout repository.
+              uses: actions/checkout@v2
+              with:
+                ref: ${{ github.event.sha }}
+            - name: Generate html.
+              run: make
