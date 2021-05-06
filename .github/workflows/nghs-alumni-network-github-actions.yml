@@ -1,0 +1,22 @@
+name: nghs-alumni-network
+on: 
+    # Trigger the workflow on pushes to master and on pull requests.
+    push:
+        branches:
+            - master
+    pull_request:
+jobs:
+    build-content:
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Checkout repository.
+              uses: actions/checkout@v2
+              with:
+                ref: ${{ github.event.sha }}
+            - name: Generate html.
+              run: make
+            - name: Upload artifacts.
+              uses: actions/upload-artifact@v2
+              with: 
+                name: generated-html
+                path: gen/
