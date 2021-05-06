@@ -1,5 +1,10 @@
 name: nghs-alumni-network
-on: [push]
+on: 
+    # Trigger the workflow on pushes to master and on pull requests.
+    push:
+        branches:
+            - master
+    pull_request:
 jobs:
     build-content:
         runs-on: ubuntu-20.04
