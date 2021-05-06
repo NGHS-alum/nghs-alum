@@ -19,4 +19,6 @@ jobs:
               uses: actions/upload-artifact@v2
               with: 
                 name: generated-html
-                path: gen/
+                path: |
+                    gen/
+                    html/
