@@ -10,7 +10,7 @@ html: $(GEN) $(MARKDOWN)
 	find gen -type f -name '*.html' | xargs -I{} ./html_gen.sh {} html
 	cp *.css html/
 
-gen/alum.html: alum.csv
+gen/alum.html: alum.csv | gen
 	sed "s/,/<\/td><td>/g; s/.*/<tr><td>&<\/td><\/tr>/g" alum.csv > $@
 
 gen/%.html: % | gen
